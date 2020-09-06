@@ -28,12 +28,12 @@
 	
 import UIKit
 
-let apiKey = "a35c883530bbe53c6db409d2a493991e"
+let apiKey = "d736f1fb37e5259ac02ee4f7bd6e561f"
 
 class Flickr {
   enum Error: Swift.Error {
     case unknownAPIResponse
-    case generic
+    case all
   }
   
   func searchFlickr(for searchTerm: String, completion: @escaping (Result<FlickrSearchResults>) -> Void) {
@@ -78,7 +78,7 @@ class Flickr {
           print("Results processed OK")
         case "fail":
           DispatchQueue.main.async {
-            completion(Result.error(Error.generic))
+            completion(Result.error(Error.all))
           }
           return
         default:
