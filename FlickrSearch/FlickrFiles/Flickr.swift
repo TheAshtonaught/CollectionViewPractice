@@ -2,7 +2,7 @@
 
 import UIKit
 
-let apiKey = "292ea9b22812ab4f7f2aefffe97e6e91"
+let apiKey = "643afa307117ca4194c2c1c24ce556b3"
 
 class Flickr {
   enum Error: Swift.Error {
